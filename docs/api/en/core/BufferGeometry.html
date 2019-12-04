@@ -120,13 +120,13 @@
 		<h3>[property:Integer id]</h3>
 		<p>Unique number for this bufferGeometry instance.</p>
 
-		<h3>[property:BufferAttribute index]</h3>
+		<h3>[property:BufferAttribute index] | null</h3>
 		<p>
 			Allows for vertices to be re-used across multiple triangles; this is called using "indexed triangles" and
 			works much the same as it does in [page:Geometry]: each triangle is associated with the indices of three vertices.
 			This attribute therefore stores the index of each vertex for each triangular face.
 
-			If this attribute is not set, the [page:WebGLRenderer renderer] assumes that each three contiguous
+			If this attribute is set to *null* (default), the [page:WebGLRenderer renderer] assumes that each three contiguous
 			positions represent a single triangle.
 
 			Default is *null*.
@@ -236,7 +236,7 @@
 		<h3>[method:BufferAttribute getAttribute]( [param:String name] )</h3>
 		<p>Returns the [page:BufferAttribute attribute] with the specified name.</p>
 
-		<h3>[method:BufferAttribute getIndex] ()</h3>
+		<h3>[method:BufferAttribute getIndex] | null ()</h3>
 		<p>Return the [page:.index] buffer.</p>
 
 		<h3>[method:BufferGeometry lookAt] ( [param:Vector3 vector] )</h3>
@@ -283,7 +283,7 @@
 		Use [page:Object3D.scale] for typical real-time mesh scaling.
 		</p>
 
-		<h3>[method:null setIndex] ( [param:BufferAttribute index] )</h3>
+		<h3>[method:null setIndex] ( [param:BufferAttribute index] | null )</h3>
 		<p>Set the [page:.index] buffer.</p>
 
 		<h3>[method:null setDrawRange] ( [param:Integer start], [param:Integer count] )</h3>
